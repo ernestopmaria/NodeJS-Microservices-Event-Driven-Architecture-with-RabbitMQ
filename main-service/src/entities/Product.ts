@@ -1,10 +1,13 @@
 
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ObjectIdColumn } from "typeorm";
 
 @Entity()
 export class Product {
-    @PrimaryGeneratedColumn()
-    id: number;
+    @ObjectIdColumn()
+    id: string;
+
+    @Column({ unique: true })
+    admin_id: number;
 
     @Column()
     title: string;
