@@ -3,7 +3,7 @@ import { Product } from '../entities/Product'
 
 export const AppDataSource = new DataSource({
      type: "mongodb",
-    url: 'mongodb+srv://ernestomaria93:1993luanda@next.gfru91h.mongodb.net/products',
+    url: process.env.MONGODB_URL,
     useNewUrlParser: true,
     useUnifiedTopology:true,
     synchronize: true,
