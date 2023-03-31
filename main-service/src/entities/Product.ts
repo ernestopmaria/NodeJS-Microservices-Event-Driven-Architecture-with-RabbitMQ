@@ -1,10 +1,10 @@
 
-import { Column, Entity, ObjectIdColumn } from "typeorm";
+import { Column, Entity, ObjectID, ObjectIdColumn } from "typeorm";
 
 @Entity()
 export class Product {
     @ObjectIdColumn()
-    id: string;
+    _id: string;
 
     @Column({ unique: true })
     admin_id: number;
