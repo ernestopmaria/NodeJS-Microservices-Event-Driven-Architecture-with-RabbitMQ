@@ -1,5 +1,8 @@
-import {DataSource} from 'typeorm'
+import dotenv from 'dotenv';
+import { DataSource } from 'typeorm'
 import { Product } from '../entities/Product'
+
+dotenv.config();
 
 export const AppDataSource = new DataSource({
      type: "mongodb",
